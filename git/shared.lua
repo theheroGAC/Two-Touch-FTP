@@ -1,8 +1,9 @@
 -- Constants
 
 APP_REPO = "theheroGAC"
-APP_PROJECT = "Two-Touch-FTP"			--here name of repo in github...
-
+APP_PROJECT = "Two-Touch-FTP"
+APP_VPK = "Two.Touch.FTP"
+			
 APP_VERSION_MAJOR = 0x01 -- major.minor
 APP_VERSION_MINOR = 0x01
 
