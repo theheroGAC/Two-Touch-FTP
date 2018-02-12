@@ -33,6 +33,7 @@ while true do
 	if ftp.state() then	screen.print(10,70,"Connect to:>>>> ftp://"..tostring(wlan.getip())..":1337",1,color.green) end
 
 	screen.flip() -- Show Buff
+       power.tick(__POWER_TICK_SUSPEND)
 
 	if buttons.released.start then break end -- Exit
 
