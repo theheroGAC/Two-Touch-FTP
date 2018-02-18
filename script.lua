@@ -27,15 +27,16 @@ while true do
 	buttons.read()
 	if back then back:blit(0,0) end
 	
-	screen.print(10,30,"Press START to exit.",1,color.white,color.red)
-	screen.print(10,50, "Mac: "..tostring(os.mac()))
+	screen.print(10,30,"Press TRIANGLE to EXIT.",1,color.white,color.red)
+       screen.print(10,50,"Press CROSS to EXPLORER.",1,color.white,color.red)
+	screen.print(10,70, "Mac: "..tostring(os.mac()))
 
-	if ftp.state() then	screen.print(10,70,"Connect to:>>>> ftp://"..tostring(wlan.getip())..":1337",1,color.green) end
+	if ftp.state() then	screen.print(10,90,"Connect to:>>>> ftp://"..tostring(wlan.getip())..":1337",1,color.green) end
 
 	screen.flip() -- Show Buff
        power.tick(__POWER_TICK_SUSPEND)
 
-	if buttons.released.start then break end -- Exit
+	if buttons.triangle then break end -- Exit
+       if buttons.cross then dofile("resources/explorer.lua") end
 
 end
-ftp.term()
